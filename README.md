@@ -18,6 +18,7 @@ Almost everything you will want to change lives in **`assets/js/data.js`**:
 | Research projects                  | `projects`                |
 | Supervisors, co-authors, lab mates | `people`                  |
 | Places on the network map          | `places` (lat/lon + entries) |
+| Rivers in the homepage forecast    | `rivers`                  |
 | Academic timeline                  | `timeline`                |
 | PhD title, questions, models       | `phd`                     |
 | Email, ORCID, Scholar, etc.        | `links`                   |
@@ -46,15 +47,18 @@ index.html                 page structure and static text
 assets/css/style.css       design tokens (colours, fonts) and layout
 assets/js/data.js          ALL editable content
 assets/js/main.js          navigation, projects, publications, people, timeline, workflow
-assets/js/viz.js           hero forecast schematic and compound-event explainer
+assets/js/live.js          homepage live river forecast (GloFAS via Open-Meteo, with offline fallback)
+assets/js/viz.js           compound-event explainer
 assets/js/map.js           research network map
-assets/vendor/             d3-array, d3-geo, topojson-client, Natural Earth 110m land (self-hosted)
+assets/vendor/map-bundle.js  d3-array, d3-geo, topojson-client + Natural Earth 110m land in ONE file
 assets/fonts/              Newsreader, Instrument Sans, JetBrains Mono (self-hosted, OFL)
 assets/docs/               CV (PDF)
 assets/img/                photo and social-sharing card
 ```
 
 ## Notes
-- The hero forecast and the compound-event explainer use synthetic data generated in the browser and are labelled as such on the page.
+- The homepage forecast is live GloFAS v4 ensemble data (Copernicus EMS) from the free Open-Meteo Flood API (CC BY 4.0), attributed on the page and labelled as not being my model. If the API is unreachable, a schematic with synthetic data is shown and labelled as such.
+- The compound-event explainer uses synthetic data generated in the browser and is labelled as such.
+- Upload check: after pushing, the repository must contain `assets/vendor/map-bundle.js`, otherwise the map shows a text list only.
 - The map draws coastlines only (Natural Earth 110m land); no political boundaries are shown.
 - Fonts: Newsreader, Instrument Sans, JetBrains Mono (SIL Open Font License). Map libraries: d3 (ISC), topojson-client (ISC), world-atlas / Natural Earth (public domain).
