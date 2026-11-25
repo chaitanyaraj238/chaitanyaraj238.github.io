@@ -1,69 +1,420 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#f7f8f5">
-<title>Chaitanya Raj | Climate & Hydroclimate Research</title>
-<meta name="description" content="Academic profile of Chaitanya Raj: climate extremes, subseasonal forecasting, hydrological modelling and geospatial climate science.">
-<style>
-:root{--bg:#f7f8f5;--paper:#fff;--ink:#17231f;--muted:#63716b;--line:#dfe6df;--green:#176b52;--mint:#dff2e9;--gold:#c28a3d;--navy:#18342e;--max:1160px}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 Inter,system-ui,-apple-system,"Segoe UI",sans-serif}a{color:var(--green);text-decoration:none}a:hover{text-decoration:underline}.wrap{width:min(var(--max),calc(100% - 42px));margin:auto}
-header{position:sticky;top:0;z-index:10;background:#f7f8f5ee;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:850;letter-spacing:-.04em;color:var(--ink)}.brand span{color:var(--green)}nav{display:flex;gap:23px;font-size:.9rem;color:var(--muted)}nav a{color:inherit}
-.hero{padding:75px 0 68px;display:grid;grid-template-columns:1.3fr .7fr;gap:65px;align-items:center}.eyebrow{color:var(--green);font-size:.77rem;letter-spacing:.13em;text-transform:uppercase;font-weight:800;display:flex;gap:10px;align-items:center}.eyebrow:before{content:"";width:28px;height:2px;background:var(--gold)}h1{font-size:clamp(3.2rem,6.7vw,6rem);line-height:.98;letter-spacing:-.075em;margin:22px 0 25px}h1 em{font-style:normal;color:var(--green)}.lead{max-width:680px;color:var(--muted);font-size:1.1rem}.lead strong{color:var(--ink)}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border:1px solid var(--line);border-radius:9px;background:white;color:var(--ink);font-weight:700;font-size:.9rem}.btn.primary{background:var(--green);color:white;border-color:var(--green)}.btn:hover{transform:translateY(-2px);text-decoration:none}
-.portrait-wrap{position:relative;max-width:385px;margin-left:auto}.portrait-wrap:before{content:"";position:absolute;inset:20px -17px -17px 20px;border:1px solid #c8d9ce;border-radius:17px}.portrait{position:relative;display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 28%;border-radius:15px;background:#e8ece8;box-shadow:0 18px 45px #18342e20}.photo-caption{position:absolute;bottom:23px;left:-20px;background:var(--navy);color:white;padding:13px 17px;border-radius:9px;font-size:.84rem}.photo-caption b{display:block;font-size:1rem}.photo-caption span{color:#c8ded4}
-.quick{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden}.quick div{background:white;padding:17px 19px}.quick b{display:block;font-size:.9rem}.quick span{color:var(--muted);font-size:.77rem}
-section{padding:72px 0;border-top:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;align-items:end;gap:26px;margin-bottom:32px}.label{font-size:.74rem;text-transform:uppercase;letter-spacing:.15em;color:var(--green);font-weight:800}.section-head h2{font-size:clamp(2rem,4vw,3.4rem);line-height:1.05;letter-spacing:-.06em;margin:9px 0 0}.section-head p{max-width:480px;color:var(--muted);margin:0}
-.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:45px}.prose{color:var(--muted);font-size:1rem}.prose p:first-child{margin-top:0}.prose strong{color:var(--ink)}.note{padding:23px 25px;background:var(--mint);border-left:3px solid var(--green);border-radius:0 10px 10px 0;color:#35564a}.note b{display:block;color:var(--navy);margin-bottom:6px}.note p{margin:0;font-size:.92rem}
-.research-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.research-card{padding:26px;border:1px solid var(--line);background:white;border-radius:13px;transition:.2s}.research-card:hover{transform:translateY(-3px);border-color:#b6d2c3;box-shadow:0 12px 28px #18342e0b}.n{font-size:.74rem;color:var(--gold);font-weight:850;letter-spacing:.12em}.research-card h3{font-size:1.18rem;margin:12px 0 8px;letter-spacing:-.03em}.research-card p{margin:0;color:var(--muted);font-size:.92rem}.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:17px}.chips span{font-size:.72rem;padding:4px 9px;border-radius:99px;background:#eef4ef;color:#49675b}
-.timeline{display:grid}.entry{display:grid;grid-template-columns:155px 1fr;gap:24px;padding:21px 0;border-bottom:1px solid var(--line)}.entry:first-child{border-top:1px solid var(--line)}.date{color:var(--green);font-weight:800;font-size:.85rem}.entry h3{margin:0;font-size:1.03rem}.org{font-weight:650;color:var(--muted);font-size:.88rem}.entry p{margin:7px 0 0;color:var(--muted);font-size:.9rem}
-.pub-list{display:grid;gap:12px}.pub{display:grid;grid-template-columns:112px 1fr auto;gap:18px;align-items:start;padding:20px 22px;border:1px solid var(--line);background:white;border-radius:12px}.type{font-size:.73rem;color:var(--green);font-weight:850;text-transform:uppercase;letter-spacing:.07em}.pub h3{font-size:.98rem;line-height:1.5;margin:0 0 5px}.pub p{margin:0;color:var(--muted);font-size:.85rem}.pub .link{font-size:.83rem;font-weight:800;white-space:nowrap}.status{display:inline-block;font-size:.7rem;background:#f7edda;color:#855d22;padding:3px 8px;border-radius:99px;margin-top:8px}
-.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.skill{padding:21px;background:white;border:1px solid var(--line);border-radius:12px}.skill h3{margin:0 0 8px;font-size:1rem}.skill p{margin:0;color:var(--muted);font-size:.87rem}
-.contact{background:var(--navy);color:white;border-radius:16px;padding:36px;display:flex;justify-content:space-between;align-items:center;gap:24px}.contact .label{color:#9ed9bd}.contact h2{font-size:clamp(2rem,4vw,3rem);letter-spacing:-.06em;line-height:1.05;margin:10px 0}.contact p{color:#c5d5cd;margin:8px 0 0}.contact .btn{background:var(--mint);border-color:var(--mint);color:var(--navy)}
-footer{padding:29px 0;color:var(--muted);font-size:.82rem}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-@media(max-width:850px){nav{gap:13px;font-size:.8rem}.hero{grid-template-columns:1fr .65fr;gap:32px;padding:58px 0}.quick{grid-template-columns:repeat(2,1fr)}.about-grid{grid-template-columns:1fr;gap:24px}.section-head{align-items:start;flex-direction:column}.entry{grid-template-columns:120px 1fr}.skills{grid-template-columns:1fr 1fr}}
-@media(max-width:600px){.wrap{width:calc(100% - 30px)}.nav{height:auto;min-height:70px;flex-wrap:wrap;padding:13px 0}.brand{font-size:.98rem}nav{width:100%;overflow-x:auto;padding-bottom:5px;white-space:nowrap}.hero{grid-template-columns:1fr;padding:48px 0 40px;gap:36px}.hero h1{font-size:clamp(3.1rem,15vw,5rem)}.portrait-wrap{width:min(85%,330px);margin:0 auto 12px}.quick div{padding:13px}.quick b{font-size:.83rem}.quick span{font-size:.72rem}section{padding:56px 0}.research-grid,.skills{grid-template-columns:1fr}.entry{grid-template-columns:1fr;gap:5px;padding:18px 0}.pub{grid-template-columns:1fr;gap:7px;padding:18px}.pub .link{white-space:normal}.contact{padding:24px;align-items:start;flex-direction:column}}
-</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chaitanya Raj | Computational Hydrology, Forecasting & Climate Extremes</title>
+<meta name="description" content="Chaitanya Raj is a PhD researcher in computational hydrology at the AQUARIUS Research Lab, Czech University of Life Sciences Prague, working on hydrological forecasting, early warning and compound climate extremes.">
+<meta name="author" content="Chaitanya Raj">
+<meta name="keywords" content="Chaitanya Raj, computational hydrology, hydrological forecasting, early warning, compound dry and hot events, drought, heatwave, AQUARIUS, CZU Prague, Oldřich Rakovec">
+<meta name="theme-color" content="#F3F6F7">
+<link rel="canonical" href="https://chaitanyaraj238.github.io/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Chaitanya Raj | Computational Hydrology">
+<meta property="og:description" content="PhD researcher at the AQUARIUS Research Lab, CZU Prague. Hydrological forecasting, early warning and compound climate extremes.">
+<meta property="og:url" content="https://chaitanyaraj238.github.io/">
+<meta property="og:image" content="https://chaitanyaraj238.github.io/assets/img/og-card.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preload" href="assets/fonts/newsreader-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/instrument-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Chaitanya Raj",
+  "url": "https://chaitanyaraj238.github.io/",
+  "image": "https://chaitanyaraj238.github.io/assets/img/profile.jpg",
+  "jobTitle": "PhD researcher",
+  "email": "mailto:chaitanyaraj238@gmail.com",
+  "affiliation": {
+    "@type": "ResearchOrganization",
+    "name": "AQUARIUS Research Lab, Faculty of Environmental Sciences, Czech University of Life Sciences Prague",
+    "url": "https://www.fzp.czu.cz/en/r-9409-science-research/r-9674-leading-research-groups/r-23077-aquarius-research-lab/r-23078-about"
+  },
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "Indian Institute of Science Education and Research Bhopal" },
+  "knowsAbout": ["Computational hydrology", "Hydrological forecasting", "Early warning", "Compound dry and hot extremes", "Drought", "Heatwaves", "Remote sensing", "Hydrological modelling"],
+  "sameAs": [
+    "https://www.linkedin.com/in/chaitanya-raj-8bb1a2297/",
+    "https://scholar.google.com/citations?user=_9G_vBkAAAAJ",
+    "https://www.researchgate.net/profile/Chaitanya-Raj",
+    "https://github.com/chaitanyaraj238"
+  ]
+}
+</script>
 </head>
 <body>
-<header><div class="wrap nav"><a class="brand" href="#home">CHAITANYA <span>RAJ</span></a><nav><a href="#about">About</a><a href="#research">Research</a><a href="#experience">Experience</a><a href="#publications">Publications</a><a href="#contact">Contact</a></nav></div></header>
-<main>
-<div class="wrap hero" id="home">
-<div><div class="eyebrow">Climate · Hydrology · Forecasting</div><h1>Researching<br>a changing<br><em>climate.</em></h1>
-<p class="lead"><strong>Chaitanya Raj</strong> is a climate and hydroclimate researcher working at the intersection of climate extremes, subseasonal forecasting, and computational hydrological modelling. My work combines climate data, statistical methods, and geospatial analysis to better understand high-impact environmental events and improve the evidence available for climate-risk research.</p>
-<div class="actions"><a class="btn primary" href="#research">Explore research ↓</a><a class="btn" href="#publications">Selected publications ↗</a></div></div>
-<div class="portrait-wrap"><img class="portrait" src="profile.jpg" alt="Portrait of Chaitanya Raj"><div class="photo-caption"><b>Chaitanya Raj</b><span>Climate & Hydroclimate Research</span></div></div>
-</div>
-<div class="wrap quick"><div><b>Climate extremes</b><span>Drought · Heat · Heavy rainfall</span></div><div><b>Forecasting</b><span>Subseasonal to seasonal</span></div><div><b>Hydrology</b><span>Computational modelling</span></div><div><b>Geospatial science</b><span>Remote sensing · GIS</span></div></div>
-<section id="about"><div class="wrap"><div class="section-head"><div><div class="label">Profile</div><h2>About my work</h2></div><p>Climate science that connects rigorous analysis with the challenges of a warming and increasingly variable environment.</p></div>
-<div class="about-grid"><div class="prose"><p>I am a researcher in <strong>Earth and Environmental Sciences</strong>, with an academic background in climate science, hydrology, and geospatial analysis. I completed an Integrated BS–MS degree at the Indian Institute of Science Education and Research (IISER) Bhopal, where my master's research focused on compound dry and hot extremes in Madhya Pradesh.</p><p>My research has since expanded toward multi-hazard climate extremes across India and the prediction of pre-monsoon heatwaves at subseasonal timescales. I am particularly interested in how observational datasets, reanalysis products, climate indices, and numerical models can be used together to characterize events, evaluate forecast skill, and support better understanding of hydroclimatic risk.</p><p>Alongside climate analysis, I have worked on satellite-based coastal mapping and bathymetry, and I use programming and geospatial tools to develop reproducible research workflows.</p></div><aside class="note"><b>Current research direction</b><p>Subseasonal forecasting and computational hydrological modelling, with an emphasis on prediction and modelling of hydroclimatic processes.</p></aside></div></div></section>
-<section id="research"><div class="wrap"><div class="section-head"><div><div class="label">Research interests</div><h2>Topics I explore</h2></div><p>My work brings together climate diagnostics, prediction, and spatial analysis to investigate environmental extremes across scales.</p></div>
-<div class="research-grid">
-<article class="research-card"><div class="n">01 / EXTREMES</div><h3>Climate extremes & compound events</h3><p>Characterizing droughts, heatwaves, extreme precipitation, and compound dry–hot events through frequency, duration, intensity, spatial extent, and changing behaviour.</p><div class="chips"><span>Drought</span><span>Heatwaves</span><span>Compound events</span></div></article>
-<article class="research-card"><div class="n">02 / PREDICTION</div><h3>Subseasonal forecasting</h3><p>Investigating forecast skill and predictability of pre-monsoon heatwaves and other high-impact weather events, including the role of large-scale climate drivers.</p><div class="chips"><span>S2S prediction</span><span>Forecast verification</span><span>Heat risk</span></div></article>
-<article class="research-card"><div class="n">03 / HYDROLOGY</div><h3>Hydrological modelling</h3><p>Applying computational hydrological models and climate information to understand streamflow variability, water stress, and hydroclimatic processes.</p><div class="chips"><span>Hydrology</span><span>Modelling</span><span>Water resources</span></div></article>
-<article class="research-card"><div class="n">04 / EARTH OBSERVATION</div><h3>Remote sensing & geospatial analysis</h3><p>Using satellite imagery and spatial methods to study coastal change, shoreline dynamics, and satellite-derived bathymetry.</p><div class="chips"><span>GIS</span><span>Sentinel-2</span><span>Coastal science</span></div></article>
-</div></div></section>
-<section id="experience"><div class="wrap"><div class="section-head"><div><div class="label">Academic journey</div><h2>Research & experience</h2></div><p>Selected research roles and academic training. This timeline can be expanded as new projects and appointments are added.</p></div><div class="timeline">
-<div class="entry"><div class="date">Oct 2026 – Present</div><div><h3>PhD Research Scholar</h3><div class="org">Subseasonal Forecasting · Computational Hydrological Modelling</div><p>Current research direction focused on prediction and modelling of hydroclimatic processes.</p></div></div>
-<div class="entry"><div class="date">Nov 2025 – Sep 2026</div><div><h3>Junior Research Fellow</h3><div class="org">Indian Institute of Technology Hyderabad</div><p>Seasonal to subseasonal forecasting of pre-monsoon heatwaves over India. Supervisor: Dr. R. Maheswaran.</p></div></div>
-<div class="entry"><div class="date">May – Nov 2025</div><div><h3>Project Associate</h3><div class="org">Indian Institute of Technology Jodhpur</div><p>Multi-hazard analysis of droughts, heatwaves, extreme precipitation, and streamflow using statistical indices and hydrological modelling. Supervisor: Dr. Saran Aadhar.</p></div></div>
-<div class="entry"><div class="date">Jul 2024 – May 2025</div><div><h3>Integrated BS–MS Thesis</h3><div class="org">IISER Bhopal · Earth and Environmental Sciences</div><p>Modelling and evaluating compound dry and hot event vulnerabilities in Madhya Pradesh. The work was featured in The Times of India and Ground Report. Supervisor: Dr. Somil Swarnkar.</p></div></div>
-<div class="entry"><div class="date">May – Jul 2024</div><div><h3>Research Intern</h3><div class="org">IIT Gandhinagar</div><p>Geospatial mapping of satellite-derived shoreline trends and long-term variability along the Gujarat coast. Supervisor: Dr. Vikrant Jain.</p></div></div>
-<div class="entry"><div class="date">Jun – Aug 2023</div><div><h3>Research Intern</h3><div class="org">CSIR–National Institute of Oceanography, Goa</div><p>Satellite-derived bathymetry using Sentinel-2 and Landsat 8 over the Rameshwaram coast, Tamil Nadu. Supervisor: Dr. Komal Rani.</p></div></div>
-<div class="entry"><div class="date">2020 – 2025</div><div><h3>Integrated BS–MS, Earth and Environmental Sciences</h3><div class="org">Indian Institute of Science Education and Research (IISER) Bhopal</div><p>Integrated undergraduate and master's training in Earth and environmental sciences.</p></div></div>
-</div></div></section>
-<section id="publications"><div class="wrap"><div class="section-head"><div><div class="label">Research output</div><h2>Selected publications</h2></div><p>Peer-reviewed work, ongoing manuscripts, and research contributions. Add further papers, DOI links, and preprints as your publication list grows.</p></div><div class="pub-list">
-<article class="pub"><div class="type">Journal · 2025</div><div><h3>Compound dry and hot events in Madhya Pradesh: temporal shifts, regional hotspots, and adaptation strategies</h3><p>Raj, C., Swarnkar, S., Poonia, V. et al. · <i>Theoretical and Applied Climatology</i>, 156, 333 (2025).</p></div><a class="link" href="https://doi.org/10.1007/s00704-025-05573-1" target="_blank" rel="noopener">DOI ↗</a></article>
-<article class="pub"><div class="type">Book chapter · 2024</div><div><h3>Evaluating Compound Dry and Hot Events in Bhopal: Past Trends and Insights from Future Climate Projections</h3><p>Raj, C., Sahu, V., Swarnkar, S., Poonia, V. et al. · In <i>Blue Sky, Blue Water</i>, Taylor & Francis.</p></div><a class="link" href="https://doi.org/10.1201/9781003613183-7" target="_blank" rel="noopener">DOI ↗</a></article>
-<article class="pub"><div class="type">Journal article · 2026</div><div><h3>From episodic to recurrent: progression of compound dry-hot hydroclimatic stress in Delhi, India</h3><p>Sahu, V., Raj, C., Swarnkar, S. et al. · <i>Regional Environmental Change</i>, 26, 227 (2026). Published 29 October 2026.</p></div><a class="link" href="https://doi.org/10.1007/s10113-026-02712-w" target="_blank" rel="noopener">DOI ↗</a></article>
-<article class="pub"><div class="type">Manuscript</div><div><h3>Hydroclimatic Extremes and Water Stress Under Warming: Combined Vulnerability Assessment for Madhya Pradesh, India</h3><p>Raj, C., Swarnkar, S., Poonia, V. · Listed as under review in the supplied CV.</p><span class="status">Under review · Update status when appropriate</span></div><span></span></article>
-<article class="pub"><div class="type">Conference</div><div><h3>Satellite-Derived Bathymetry (SDB) Analysis along the Rameshwaram Coast with Sentinel-2 Data</h3><p>Conference abstract based on satellite-derived bathymetry research.</p></div><span></span></article>
-</div></div></section>
-<section id="skills"><div class="wrap"><div class="section-head"><div><div class="label">Methods & tools</div><h2>Research toolkit</h2></div><p>Tools and methods used across climate, hydrological, and geospatial research.</p></div><div class="skills">
-<div class="skill"><h3>Programming & analysis</h3><p>Python · R · MATLAB · Google Earth Engine · LaTeX</p></div><div class="skill"><h3>Geospatial & remote sensing</h3><p>QGIS · ArcGIS · ENVI · SNAP · DSAS · Geosoft</p></div><div class="skill"><h3>Hydrological & ML models</h3><p>SWAT · VIC · LSTM · Random Forest · KNN</p></div>
-</div></div></section>
-<section id="contact"><div class="wrap"><div class="contact"><div><div class="label">Contact</div><h2>Let's talk research.</h2><p>For research discussions, collaborations, or academic opportunities, feel free to get in touch.</p></div><div class="actions"><a class="btn" href="mailto:chaitanyaraj238@gmail.com">Email me ↗</a><a class="btn" href="https://github.com/chaitanyaraj238" target="_blank" rel="noopener">GitHub ↗</a></div></div></div></section>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="wordmark" href="#top" aria-label="Chaitanya Raj, back to top">
+      <svg viewBox="0 0 28 28" aria-hidden="true"><path d="M3 20c4 0 5-9 9-9s4 6 7 6 4-8 6-8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+      <span>Chaitanya Raj</span>
+    </a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav" aria-label="Sections">
+      <a href="#phd">PhD</a>
+      <a href="#research">Research</a>
+      <a href="#projects">Projects</a>
+      <a href="#network">Network</a>
+      <a href="#publications">Publications</a>
+      <a href="#toolkit">Toolkit</a>
+      <a href="#journey">Journey</a>
+      <a class="nav-cv" href="assets/docs/Chaitanya_Raj_CV.pdf" download>CV (PDF)</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <p class="hero-kicker">Computational hydrology at CZU Prague</p>
+      <h1>How far ahead can we see the next flood or&nbsp;drought?</h1>
+      <p class="hero-lead">I’m Chaitanya Raj, a PhD researcher in Dr.&nbsp;Oldřich Rakovec’s <a href="#phd">AQUARIUS Research Lab</a> at the Czech University of Life Sciences Prague. I work on hydrological forecasting and early warning, building on earlier research into compound droughts and heatwaves across India.</p>
+      <div class="hero-actions">
+        <a class="btn btn-solid" href="#research">See my research</a>
+        <a class="btn" href="#publications">Publications</a>
+        <a class="btn" href="assets/docs/Chaitanya_Raj_CV.pdf" download>Download CV</a>
+      </div>
+    </div>
+    <figure class="hero-photo">
+      <picture>
+        <source srcset="assets/img/profile.webp" type="image/webp">
+        <img src="assets/img/profile.jpg" width="720" height="900" alt="Portrait of Chaitanya Raj">
+      </picture>
+      <figcaption>
+        <span>PhD researcher</span>
+        <span>AQUARIUS Research Lab, CZU Prague</span>
+      </figcaption>
+    </figure>
+  </div>
+
+  <div class="wrap">
+    <figure class="forecast" aria-labelledby="forecast-cap">
+      <div class="forecast-head">
+        <div class="forecast-legend" aria-hidden="true">
+          <span class="lg lg-obs">Observed flow</span>
+          <span class="lg lg-ens">Ensemble members</span>
+          <span class="lg lg-band">10–90% range</span>
+          <span class="lg lg-truth">What happened</span>
+        </div>
+        <div class="forecast-ctrl">
+          <button class="chip" id="fc-new" type="button">Issue a new forecast</button>
+          <button class="chip" id="fc-truth" type="button" aria-pressed="false">Show what happened</button>
+        </div>
+      </div>
+      <canvas id="forecast-canvas" role="img" aria-label="Schematic ensemble streamflow forecast. Past observed flow leads up to the moment the forecast is issued; after that, thirty ensemble members fan out, and their spread widens as lead time increases."></canvas>
+      <figcaption id="forecast-cap">Schematic of an ensemble streamflow forecast: the spread widens with lead time, which is why forecast skill and uncertainty are central to early warning. <strong>Synthetic data generated in your browser, not a research result.</strong></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="sec" id="about">
+  <div class="wrap sec-grid">
+    <header class="sec-head">
+      <h2>From coastlines to catchments</h2>
+      <p>How my research moved from mapping coasts, to measuring extremes, to predicting them.</p>
+    </header>
+    <div class="sec-body about">
+      <div class="prose">
+        <p>I trained in Earth and Environmental Sciences at IISER Bhopal. My first research projects looked at water from orbit: estimating nearshore depth from Sentinel-2 and Landsat 8 imagery at CSIR–National Institute of Oceanography, then mapping long-term shoreline change along the Gujarat coast at IIT Gandhinagar.</p>
+        <p>My master’s thesis turned to climate extremes. I studied compound dry and hot events, when drought and heat strike together, across Madhya Pradesh. That work became a first-author paper in <em>Theoretical and Applied Climatology</em>, was presented at AGU 2024 and IAHS 2025, and was covered by The Times of India and Ground Report.</p>
+        <p>From there the questions grew in scale and moved towards prediction: multi-hazard extremes and streamflow across India with hydrological modelling at IIT Jodhpur, then seasonal-to-subseasonal forecasting of pre-monsoon heatwaves at IIT Hyderabad.</p>
+        <p>In my PhD I bring these threads together. I’m interested in computational, data-oriented approaches that help us understand, model and predict hydrological processes and the extremes that matter most for people.</p>
+      </div>
+      <ol class="path" aria-label="Research trajectory">
+        <li><span class="path-yr">2023</span><span class="path-t">Coasts from orbit</span><span class="path-d">Satellite bathymetry and shoreline change</span></li>
+        <li><span class="path-yr">2024</span><span class="path-t">Compound extremes</span><span class="path-d">Drought and heat in central India</span></li>
+        <li><span class="path-yr">2025</span><span class="path-t">Extremes at scale</span><span class="path-d">Multi-hazard analysis and hydrological modelling</span></li>
+        <li><span class="path-yr">2025–26</span><span class="path-t">Prediction</span><span class="path-d">Subseasonal heatwave forecasting</span></li>
+        <li class="now"><span class="path-yr">2026–</span><span class="path-t">Hydrological forecasting</span><span class="path-d">PhD, AQUARIUS Lab, Prague</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PhD ============ -->
+<section class="sec sec-phd" id="phd">
+  <div class="wrap sec-grid">
+    <header class="sec-head">
+      <h2>Current PhD research</h2>
+      <p>Where my doctoral work sits: the lab and its themes, my supervisor’s research, and how my earlier projects lead here.</p>
+    </header>
+    <div class="sec-body">
+      <article class="phd-main">
+        <h3 class="phd-title" id="phd-title">Hydrological forecasting and early warning</h3>
+        <p class="phd-lede">Within AQUARIUS I lead the lab’s forecasting theme. It asks how hydrological models, weather forecasts and observations can be combined to anticipate floods and droughts, how updating a model with recent observations improves its forecasts, and how predictive skill and uncertainty change as lead time grows.</p>
+        <p class="src">Theme description adapted from the <a href="https://www.fzp.czu.cz/en/r-9409-science-research/r-9674-leading-research-groups/r-23077-aquarius-research-lab/r-23078-about" target="_blank" rel="noopener">AQUARIUS lab website</a>.</p>
+        <div id="phd-details"></div>
+
+        <dl class="facts">
+          <div><dt>Supervisor</dt><dd><a href="https://home.czu.cz/rakovec" target="_blank" rel="noopener">Dr. Oldřich Rakovec</a></dd></div>
+          <div><dt>Lab</dt><dd><a href="https://www.fzp.czu.cz/en/r-9409-science-research/r-9674-leading-research-groups/r-23077-aquarius-research-lab/r-23078-about" target="_blank" rel="noopener">AQUARIUS Research Lab</a></dd></div>
+          <div><dt>Department</dt><dd>Water Resources and Environmental Modeling</dd></div>
+          <div><dt>Faculty</dt><dd>Faculty of Environmental Sciences, Czech University of Life Sciences Prague</dd></div>
+          <div><dt>Research group</dt><dd>Hydrological and Climate Variability (HCV), led by <a href="https://home.czu.cz/en/hanel/uvod" target="_blank" rel="noopener">Prof. Martin Hanel</a></dd></div>
+          <div><dt>Started</dt><dd>October 2026</dd></div>
+        </dl>
+      </article>
+
+      <div class="phd-context">
+        <section class="ctx">
+          <h3>The lab</h3>
+          <p>AQUARIUS stands for <em>Advancing Quantitative Understanding and Assessment of hydrological Risks, Impacts and Uncertainty across Scales</em>. The lab combines hydrological modelling with observations, climate simulations and Earth observation to study how droughts and floods have evolved and how they respond to climate change. Its themes:</p>
+          <ul class="themes-list">
+            <li>Past droughts and long-term hydroclimatic variability</li>
+            <li>Rapidly developing extremes such as flash droughts and heatwaves</li>
+            <li>Climate change and hydrological extremes</li>
+            <li>Spatiotemporal drought dynamics</li>
+            <li>High-resolution modelling and Earth observation</li>
+            <li>Model calibration, evaluation and uncertainty</li>
+            <li class="mine">Hydrological forecasting and early warning <span>my theme</span></li>
+          </ul>
+        </section>
+        <section class="ctx">
+          <h3>My supervisor’s research</h3>
+          <p>Dr. Rakovec’s work centres on large-scale hydrological modelling with the mesoscale Hydrologic Model (mHM), including diagnostic evaluation of large-domain models across the contiguous United States and multi-century reconstructions of European drought, which placed the 2018–2019 event as a new benchmark. Before CZU he worked at the UFZ Helmholtz Centre for Environmental Research in Leipzig.</p>
+          <p class="links-inline"><a href="https://home.czu.cz/rakovec" target="_blank" rel="noopener">Homepage</a><a href="https://scholar.google.com/citations?user=_Fm2984AAAAJ" target="_blank" rel="noopener">Google Scholar</a><a href="https://orcid.org/0000-0003-2451-3305" target="_blank" rel="noopener">ORCID</a></p>
+        </section>
+        <section class="ctx ctx-connects">
+          <h3>How my earlier work connects</h3>
+          <ul class="connects">
+            <li><b>Forecast skill and lead time.</b> Subseasonal heatwave forecasting at IIT Hyderabad leads directly into asking how hydrological forecast skill decays with lead time.</li>
+            <li><b>Rapid, compound extremes.</b> My work on co-occurring drought and heat overlaps with the lab’s research on flash droughts and heatwaves.</li>
+            <li><b>Large-scale modelling.</b> Analysing streamflow and multi-hazard extremes across India with hydrological modelling, and experience with models such as VIC and SWAT, is a foundation for large-domain hydrological work.</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESEARCH THEMES ============ -->
+<section class="sec" id="research">
+  <div class="wrap sec-grid">
+    <header class="sec-head">
+      <h2>Research themes</h2>
+      <p>Where I work now, what I have published on, and where I’m heading. Select a theme to see the projects behind it.</p>
+    </header>
+    <div class="sec-body">
+      <ul class="theme-rows">
+        <li class="theme" data-theme="forecasting">
+          <svg class="glyph" viewBox="0 0 64 40" aria-hidden="true"><path d="M2 30 L14 26 L22 28 L30 20" class="g-solid"/><path d="M30 20 L44 14 L62 6 M30 20 L46 20 L62 18 M30 20 L46 26 L62 34" class="g-fan"/><line x1="30" y1="2" x2="30" y2="38" class="g-dash"/></svg>
+          <div><h3>Hydrological forecasting and prediction</h3><p>How skilful are forecasts of streamflow, floods and droughts, and how quickly does that skill fade with lead time? This started with subseasonal heatwave forecasting and continues in my PhD.</p></div>
+          <span class="tag tag-now">Current focus</span>
+        </li>
+        <li class="theme" data-theme="modelling">
+          <svg class="glyph" viewBox="0 0 64 40" aria-hidden="true"><path d="M6 6 L20 16 L30 30 M58 4 L44 14 L30 30 M18 36 L30 30 M30 30 L34 38 M44 14 L50 26" class="g-solid"/><circle cx="30" cy="30" r="3" class="g-node"/><circle cx="44" cy="14" r="2.4" class="g-node"/><circle cx="20" cy="16" r="2.4" class="g-node"/></svg>
+          <div><h3>Process-based and data-driven hydrological modelling</h3><p>Hydrological models such as VIC and SWAT, alongside machine-learning approaches (LSTM, random forest, KNN), to simulate streamflow and water-cycle extremes.</p></div>
+          <span class="tag tag-build">Building</span>
+        </li>
+        <li class="theme" data-theme="extremes">
+          <svg class="glyph" viewBox="0 0 64 40" aria-hidden="true"><line x1="4" y1="20" x2="60" y2="20" class="g-axis"/><line x1="32" y1="2" x2="32" y2="38" class="g-axis"/><rect x="4" y="2" width="28" height="18" class="g-quad"/><circle cx="12" cy="8" r="2" class="g-node"/><circle cx="20" cy="13" r="2" class="g-node"/><circle cx="26" cy="6" r="2" class="g-node"/><circle cx="44" cy="28" r="1.6" class="g-dot"/><circle cx="50" cy="24" r="1.6" class="g-dot"/><circle cx="38" cy="32" r="1.6" class="g-dot"/><circle cx="54" cy="12" r="1.6" class="g-dot"/></svg>
+          <div><h3>Climate extremes and compound events</h3><p>Droughts, heatwaves and extreme precipitation, and especially compound dry–hot events: how often they occur, how severe they are, and where the hotspots lie.</p></div>
+          <span class="tag tag-pub">Published work</span>
+        </li>
+        <li class="theme" data-theme="impacts">
+          <svg class="glyph" viewBox="0 0 64 40" aria-hidden="true"><path d="M4 12 C14 12 18 14 26 18 S44 26 60 30" class="g-solid"/><path d="M4 12 C16 10 22 12 30 14 S46 18 60 16" class="g-fan"/><path d="M4 34 L60 34" class="g-axis"/></svg>
+          <div><h3>Climate change and water resources</h3><p>What warming means for water stress and for the future frequency of compound events, combining historical records with climate projections.</p></div>
+          <span class="tag tag-pub">Published work</span>
+        </li>
+        <li class="theme" data-theme="geospatial">
+          <svg class="glyph" viewBox="0 0 64 40" aria-hidden="true"><g class="g-grid"><rect x="4" y="4" width="10" height="10"/><rect x="16" y="4" width="10" height="10"/><rect x="28" y="4" width="10" height="10"/><rect x="4" y="16" width="10" height="10"/><rect x="16" y="16" width="10" height="10"/><rect x="4" y="28" width="10" height="10"/></g><path d="M44 4 C40 14 52 22 46 38" class="g-solid"/></svg>
+          <div><h3>Remote sensing and geospatial analysis</h3><p>Satellite imagery and spatial methods for coastal change, satellite-derived bathymetry and gridded climate analysis, with Google Earth Engine, QGIS and ArcGIS.</p></div>
+          <span class="tag tag-early">Used throughout</span>
+        </li>
+        <li class="theme" data-theme="uncertainty">
+          <svg class="glyph" viewBox="0 0 64 40" aria-hidden="true"><path d="M4 36 C18 36 22 6 32 6 S46 36 60 36" class="g-solid"/><path d="M4 36 C14 36 20 16 32 16 S50 36 60 36" class="g-fan"/></svg>
+          <div><h3>Uncertainty and stochastic methods</h3><p>Quantifying how reliable model simulations and forecasts are. A growing interest, shaped by training in machine learning for hydrology and by the uncertainty questions at the heart of forecasting.</p></div>
+          <span class="tag tag-next">Growing interest</span>
+        </li>
+      </ul>
+      <p class="theme-hint" id="theme-hint" aria-live="polite"></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPLAINER ============ -->
+<section class="sec sec-explain" id="explainer">
+  <div class="wrap sec-grid">
+    <header class="sec-head">
+      <h2>What makes an event compound?</h2>
+      <p>A hands-on version of the idea behind my compound-event research. Move the thresholds and the dependence between dryness and heat.</p>
+    </header>
+    <div class="sec-body explain">
+      <div class="explain-plot">
+        <canvas id="cdhe-canvas" role="img" aria-label="Scatter plot of synthetic monthly precipitation index against temperature index. Months that are both drier and hotter than the chosen thresholds are highlighted as compound dry–hot months."></canvas>
+      </div>
+      <div class="explain-ctrl">
+        <label>Drought threshold <output id="o-spi">SPI ≤ −1.0</output>
+          <input type="range" id="r-spi" min="-2" max="0" step="0.1" value="-1"></label>
+        <label>Heat threshold <output id="o-sti">STI ≥ 1.0</output>
+          <input type="range" id="r-sti" min="0" max="2" step="0.1" value="1"></label>
+        <label>Dry–hot dependence <output id="o-rho">ρ = −0.4</output>
+          <input type="range" id="r-rho" min="-0.8" max="0" step="0.1" value="-0.4"></label>
+        <dl class="explain-stats" aria-live="polite">
+          <div><dt>Compound months</dt><dd id="s-obs">–</dd></div>
+          <div><dt>Expected if drought and heat were independent</dt><dd id="s-ind">–</dd></div>
+          <div><dt>Amplification</dt><dd id="s-amp">–</dd></div>
+        </dl>
+        <p class="note">When dry months also tend to be hot, compound events happen far more often than chance alone would suggest. In my research the indices are the Standardized Precipitation Index (SPI) and Standardized Temperature Index (STI). <strong>The 780 points here are synthetic, for illustration only.</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section class="sec" id="projects">
+  <div class="wrap sec-grid">
+    <header class="sec-head">
+      <h2>Research projects</h2>
+      <p>Each project with its question, data, outcome and my role, where these are documented. Open a project for details.</p>
+    </header>
+    <div class="sec-body">
+      <div class="filters" role="group" aria-label="Filter projects by theme" id="project-filters"></div>
+      <div class="projects" id="project-list"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NETWORK (dark band) ============ -->
+<section class="sec sec-dark" id="network">
+  <div class="wrap">
+    <header class="dark-head">
+      <h2>Where the research happens</h2>
+      <p>Institutions I have worked at, the places of my co-authors, the regions I have studied, and where I have presented. Select a place for details.</p>
+    </header>
+    <div class="map-shell">
+      <div class="map-toolbar">
+        <div class="seg" role="group" aria-label="Map extent">
+          <button type="button" class="seg-btn" data-view="world" aria-pressed="true">Europe to India</button>
+          <button type="button" class="seg-btn" data-view="india" aria-pressed="false">India</button>
+        </div>
+        <div class="legend" id="map-legend" role="group" aria-label="Show on map"></div>
+        <label class="toggle"><input type="checkbox" id="path-toggle" checked> Research path</label>
+      </div>
+      <div class="map-stage" id="map-stage">
+        <canvas id="map-canvas" aria-hidden="true"></canvas>
+        <svg id="map-svg" aria-hidden="true"></svg>
+        <div id="map-markers"></div>
+        <p class="map-note">Coastlines only; no political boundaries are drawn.</p>
+      </div>
+      <aside class="map-panel" id="map-panel" aria-live="polite"></aside>
+    </div>
+
+    <div class="people" id="people"></div>
+  </div>
+</section>
+
+<!-- ============ PUBLICATIONS ============ -->
+<section class="sec" id="publications">
+  <div class="wrap sec-grid">
+    <header class="sec-head">
+      <h2>Publications</h2>
+      <p>Peer-reviewed papers, a book chapter, manuscripts under review and conference contributions. Full list on <a id="scholar-link" href="#" target="_blank" rel="noopener">Google Scholar</a>.</p>
+    </header>
+    <div class="sec-body">
+      <div class="filters" role="group" aria-label="Filter publications" id="pub-filters"></div>
+      <div id="pub-list" class="pubs"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TOOLKIT ============ -->
+<section class="sec" id="toolkit">
+  <div class="wrap sec-grid">
+    <header class="sec-head">
+      <h2>Data, models and methods</h2>
+      <p>The workflow I use from raw data to interpretation, and the tools at each step. Select a step.</p>
+    </header>
+    <div class="sec-body">
+      <ol class="flow" id="flow" role="tablist" aria-label="Research workflow steps">
+        <li><button role="tab" aria-selected="true" aria-controls="flow-panel" id="flow-0" data-step="0"><span class="fn">1</span>Acquire</button></li>
+        <li><button role="tab" aria-selected="false" aria-controls="flow-panel" id="flow-1" data-step="1"><span class="fn">2</span>Process</button></li>
+        <li><button role="tab" aria-selected="false" aria-controls="flow-panel" id="flow-2" data-step="2"><span class="fn">3</span>Analyse</button></li>
+        <li><button role="tab" aria-selected="false" aria-controls="flow-panel" id="flow-3" data-step="3"><span class="fn">4</span>Model</button></li>
+        <li><button role="tab" aria-selected="false" aria-controls="flow-panel" id="flow-4" data-step="4"><span class="fn">5</span>Predict</button></li>
+        <li><button role="tab" aria-selected="false" aria-controls="flow-panel" id="flow-5" data-step="5"><span class="fn">6</span>Interpret</button></li>
+      </ol>
+      <div class="flow-panel" id="flow-panel" role="tabpanel" aria-labelledby="flow-0"></div>
+
+      <div class="kit">
+        <div class="kit-col"><h3>Programming and computing</h3><p>Python, R, MATLAB, Google Earth Engine, LaTeX, Linux</p></div>
+        <div class="kit-col"><h3>Hydrological modelling</h3><p>SWAT, VIC</p></div>
+        <div class="kit-col"><h3>Machine learning</h3><p>LSTM, random forest, k-nearest neighbours</p></div>
+        <div class="kit-col"><h3>Geospatial and remote sensing</h3><p>QGIS, ArcGIS, ENVI, SNAP, DSAS, Geosoft; Sentinel-2 and Landsat 8 imagery</p></div>
+        <div class="kit-col"><h3>Statistics and extremes</h3><p>Standardized indices (SPI, STI), bivariate empirical probability, trend analysis, JASP</p></div>
+        <div class="kit-col"><h3>Training</h3><p>Machine Learning in Hydrology (IISER Bhopal), AI/ML for Geodata Analysis (IIRS–ISRO), teaching assistant for Google Earth Engine for Hydro-Climatological Applications</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ JOURNEY ============ -->
+<section class="sec" id="journey">
+  <div class="wrap sec-grid">
+    <header class="sec-head">
+      <h2>Academic journey</h2>
+      <p>Positions, degrees, talks and publications, newest first.</p>
+      <label class="toggle toggle-light"><input type="checkbox" id="training-toggle"> Include workshops and field work</label>
+    </header>
+    <div class="sec-body">
+      <ol class="timeline" id="timeline"></ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="sec sec-contact" id="contact">
+  <div class="wrap contact">
+    <div class="contact-main">
+      <h2>Get in touch</h2>
+      <p>I’m glad to hear from researchers working on hydrological forecasting, extremes or large-scale modelling, and from anyone interested in collaborating.</p>
+      <a class="mail" id="mail-link" href="mailto:chaitanyaraj238@gmail.com">chaitanyaraj238@gmail.com</a>
+      <div class="profiles" id="profiles"></div>
+    </div>
+    <div class="contact-side">
+      <a class="cv-card" href="assets/docs/Chaitanya_Raj_CV.pdf" download>
+        <span class="cv-t">Curriculum vitae</span>
+        <span class="cv-d">Download the full CV (PDF)</span>
+      </a>
+      <address>
+        AQUARIUS Research Lab<br>
+        Faculty of Environmental Sciences<br>
+        Czech University of Life Sciences Prague<br>
+        Kamýcká 129, 165 00 Praha-Suchdol, Czechia
+      </address>
+    </div>
+  </div>
+</section>
+
 </main>
-<footer><div class="wrap foot"><span>© <span id="year"></span> Chaitanya Raj · Academic research profile</span><span>Hosted with GitHub Pages</span></div></footer>
-<script>document.getElementById("year").textContent=new Date().getFullYear();</script>
-</body></html>
+
+<footer class="site-footer">
+  <div class="wrap foot">
+    <span>© <span id="year">2026</span> Chaitanya Raj</span>
+    <span>Last updated <span id="updated"></span></span>
+  </div>
+</footer>
+
+<noscript><p class="noscript">Some sections (projects, map, publications, timeline) need JavaScript. The full record is in the <a href="assets/docs/Chaitanya_Raj_CV.pdf">CV (PDF)</a>.</p></noscript>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js" defer></script>
+<script src="assets/js/viz.js" defer></script>
+<script src="assets/vendor/d3-array.min.js" defer></script>
+<script src="assets/vendor/d3-geo.min.js" defer></script>
+<script src="assets/vendor/topojson-client.min.js" defer></script>
+<script src="assets/vendor/land-110m.js" defer></script>
+<script src="assets/js/map.js" defer></script>
+</body>
+</html>
