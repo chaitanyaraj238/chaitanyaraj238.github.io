@@ -37,9 +37,33 @@
     sections.forEach((s) => io.observe(s));
   }
 
+  /* ---------- theme toggle ---------- */
+  const root = document.documentElement, themeBtn = $("#theme-btn"), metaTheme = $('meta[name="theme-color"]');
+  function applyTheme(t, save) {
+    root.setAttribute("data-theme", t);
+    themeBtn.setAttribute("aria-label", t === "dark" ? "Switch to light theme" : "Switch to dark theme");
+    if (metaTheme) metaTheme.setAttribute("content", t === "dark" ? "#0C1821" : "#F3F6F7");
+    if (save) { try { localStorage.setItem("theme", t); } catch (e) {} }
+    window.dispatchEvent(new CustomEvent("themechange", { detail: t }));
+  }
+  applyTheme(root.getAttribute("data-theme") || "light", false);
+  themeBtn.addEventListener("click", () => applyTheme(root.getAttribute("data-theme") === "dark" ? "light" : "dark", true));
+  if (window.matchMedia) {
+    const mq = matchMedia("(prefers-color-scheme: dark)");
+    const follow = (e) => { let saved = null; try { saved = localStorage.getItem("theme"); } catch (x) {} if (!saved) applyTheme(e.matches ? "dark" : "light", false); };
+    mq.addEventListener ? mq.addEventListener("change", follow) : mq.addListener(follow);
+  }
+
   $("#year").textContent = new Date().getFullYear();
   $("#updated").textContent = S.lastUpdated;
   $("#scholar-link").href = S.links.scholar;
+
+  /* homepage status: newest published paper (journal or chapter) */
+  (function () {
+    const pub = S.publications.filter((p) => p.type === "journal" || p.type === "chapter").sort((a, b) => b.year - a.year)[0];
+    const el = $("#status-latest");
+    if (pub && el) el.innerHTML = `<a href="#publications">Paper in <i>${esc(pub.venue)}</i></a> <span>${pub.year}</span>`;
+  })();
 
   /* ---------- PhD details (only shown once filled in data.js) ---------- */
   (function renderPhd() {

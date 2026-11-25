@@ -21,7 +21,7 @@ window.SITE = {
     scholar: "https://scholar.google.com/citations?user=_9G_vBkAAAAJ&hl=en",
     researchgate: "https://www.researchgate.net/profile/Chaitanya-Raj",
     github: "https://github.com/chaitanyaraj238",
-    orcid: null, // TODO: add "https://orcid.org/0000-...." and an ORCID button appears automatically
+    orcid: "https://orcid.org/0009-0007-3732-2432",
     cv: "assets/docs/Chaitanya_Raj_CV.pdf",
     lab: "https://www.fzp.czu.cz/en/r-9409-science-research/r-9674-leading-research-groups/r-23077-aquarius-research-lab/r-23078-about",
     labPeople: "https://www.fzp.czu.cz/en/r-9409-science-research/r-9674-leading-research-groups/r-23077-aquarius-research-lab/r-23079-people",
@@ -29,6 +29,37 @@ window.SITE = {
     supervisor: "https://home.czu.cz/rakovec",
     supervisorScholar: "https://scholar.google.com/citations?user=_Fm2984AAAAJ",
     supervisorOrcid: "https://orcid.org/0000-0003-2451-3305"
+  },
+
+  /* ------------------------------------------------------------------
+     LIVE RIVER FORECASTS on the homepage.
+     Data: GloFAS v4 (Copernicus Emergency Management Service) via the
+     free Open-Meteo Flood API, CC BY 4.0. These are NOT your own model runs;
+     the page says so.
+     "candidates": a few coordinates near the river. GloFAS uses a ~5 km
+     grid, so the page tries each and keeps the one with the largest flow
+     (the main channel). To add a river, copy a block and change it.
+     ------------------------------------------------------------------ */
+  rivers: [
+    { id: "vltava", river: "Vltava", place: "Prague", link: "Where I work now",
+      candidates: [[50.09, 14.41], [50.10, 14.40], [50.05, 14.41], [50.12, 14.39], [50.00, 14.40]] },
+    { id: "narmada", river: "Narmada", place: "Narmadapuram, Madhya Pradesh", link: "The state of my MS thesis",
+      candidates: [[22.77, 77.72], [22.76, 77.70], [22.78, 77.75], [22.80, 77.68], [22.74, 77.78]] },
+    { id: "yamuna", river: "Yamuna", place: "Delhi", link: "A city in my compound-event research",
+      candidates: [[28.63, 77.25], [28.66, 77.24], [28.58, 77.27], [28.70, 77.23], [28.55, 77.30]] }
+  ],
+
+  /* ------------------------------------------------------------------
+     CODE section. Public repositories are fetched live from GitHub.
+     The section stays hidden until at least one repository qualifies.
+     exclude: repositories never shown (e.g. websites).
+     pinned:  repository names to show first, in this order.
+     ------------------------------------------------------------------ */
+  code: {
+    githubUser: "chaitanyaraj238",
+    exclude: ["chaitanyaraj238.github.io", "chaitanyaraj.github.io"],
+    pinned: [],
+    showForks: false
   },
 
   /* ------------------------------------------------------------------
@@ -156,9 +187,8 @@ window.SITE = {
       outputs: ["Theoretical and Applied Climatology (2025)", "AGU 2024 presentation", "IAHS 2025 presentation"],
       press: [
         { label: "IISER Bhopal research highlight", url: "https://www.iiserb.ac.in/highlightsdetails/47" },
-        // TODO: these two short links come from the CV; please confirm which outlet each one is.
-        { label: "Media coverage (1)", url: "https://lnkd.in/emTUWkZe" },
-        { label: "Media coverage (2)", url: "https://lnkd.in/gjXdAtS5" }
+        { label: "The Times of India", url: "https://timesofindia.indiatimes.com/city/bhopal/delayed-action-on-climate-change-can-pose-dire-threat-to-mp-warns-iiser-manit-study/articleshow/121606414.cms" },
+        { label: "Ground Report", url: "https://www.groundreport.in/extreme-weather/heatwaves-and-droughts-intensify-in-madhya-pradesh-9367663/" }
       ]
     },
     {
