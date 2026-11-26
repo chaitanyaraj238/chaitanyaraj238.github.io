@@ -1,6 +1,6 @@
 # chaitanyaraj238.github.io
 
-Personal research website of **Chaitanya Raj**, PhD researcher in computational hydrology,
+Personal research website of **Chaitanya Raj**, PhD researcher in computational hydrological modelling,
 AQUARIUS Research Lab, Czech University of Life Sciences Prague.
 
 Live site: https://chaitanyaraj238.github.io/
